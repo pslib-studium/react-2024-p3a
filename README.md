@@ -1,4 +1,4 @@
-# Příklady z Reactu pro P2A v roce 2024/25
+# Příklady z Reactu pro P3A v roce 2024/25
 
 ## Obsah
 
