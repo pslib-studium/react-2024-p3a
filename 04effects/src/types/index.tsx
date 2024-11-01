@@ -1,2 +1,1 @@
-import {type Joke} from "./Data";
-export type {Joke};
+export {type Joke} from "./Data";
