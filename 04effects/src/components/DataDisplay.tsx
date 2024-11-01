@@ -1,13 +1,10 @@
 import React, {FC, useState, useEffect} from "react"
+//import {Joke} from "../types/Data";
+import {Joke} from "../types";
+
+
 type SubDisplayProps = {
     value: string;
-}
-
-type Joke = {
-    "icon_url" : string,
-    "id" : string,
-    "url" : string,
-    "value" : string
 }
 
 const SubDisplay: FC<SubDisplayProps> = ({value}) => {
