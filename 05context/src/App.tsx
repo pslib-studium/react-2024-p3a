@@ -1,14 +1,16 @@
 import './App.css'
 import { Panel, Text, Card, Heading } from "./components"
+import {useContext} from "react"
+import { StyleContext } from './providers/StyleProvider'
 
 function App() {
-  let color = "red";
+  const {color, setColor} = useContext(StyleContext);
   return (
     <>
       <Panel>
-        <button>Red</button>
-        <button>Green</button>
-        <button>Blue</button>
+        <button style={{color: color}} onClick={e => setColor("red")}>Red</button>
+        <button style={{color: color}} onClick={e => setColor("green")}>Green</button>
+        <button style={{color: color}} onClick={e => setColor("blue")}>Blue</button>
       </Panel>
       <Heading content="Big title" />
       <Card title="Card1">
