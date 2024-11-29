@@ -1,28 +1,39 @@
 import React from 'react';
 import './App.css'
-import { Link } from "react-router-dom";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Main from "./app/Main"
 import About from "./app/About"
+import AppLayout from "./app/AppLayout"
+import AboutLayout from './app/Aboutlayout';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    element: <AppLayout />,
     children: [
       {
-        path: "/about/:id",
-        element: <About />,
+        index: true,
+        element: <Main />,
+      },
+      {
+        path: "/about",
+        element: <AboutLayout />,
+        children: [
+          {
+            index: true,
+            element: <About />,
+          },
+          {
+            path: "/about/:id",
+            element: <About />,
+          },
+        ],
       },
     ],
-  },
+  }
 ]);
 
 function App() {
@@ -30,7 +41,12 @@ function App() {
   return (
     <>
     <h1>App {count}</h1>
-    <button onClick={() => setCount(count + 1)}>Increment</button>
+    <button onClick={
+      () => {
+        setCount((x) => x + 1);
+      }
+      
+    }>Increment</button>
     {/*<Link to="/">Main</Link>*/}
     <RouterProvider router={router} />
     </>
