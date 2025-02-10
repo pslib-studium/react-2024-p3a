@@ -1,0 +1,10 @@
+.centered-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.segment {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

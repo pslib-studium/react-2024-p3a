@@ -1,19 +1,17 @@
 import React from 'react';
 import { useStyleContext } from '../../providers/StyleProvider';
+import ColorSquare from '../ColorSquare/ColorSquare';
+import styles from './HorizontalPalette.module.css';
 
 type HorizontalPaletteProps = {};
 
 const HorizontalPalette: React.FC<HorizontalPaletteProps> = () => {
-    const [{ palette }] = useStyleContext();
+    const [{ palette, color }] = useStyleContext();
 
     return (
-        <div className="horizontal-palette">
-            {palette && palette.map((color, index) => (
-                <div
-                    key={index}
-                    className="horizontal-palette__color"
-                    style={{ backgroundColor: color }}
-                >X</div>
+        <div className={styles["horizontal-palette"]}>
+            {palette && palette.map((bg, index) => (
+                <ColorSquare key={index} color={color} background={bg} />
             ))}
         </div>
     );

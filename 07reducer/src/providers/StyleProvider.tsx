@@ -18,6 +18,10 @@ const palettes: Array<Palette> = [
     {
         name: "Ocean",
         colors: ["#000080", "#0000FF", "#4682B4", "#87CEEB", "#B0E0E6", "#ADD8E6", "#87CEFA"],
+    },
+    {
+        name: "Forest",
+        colors: ["#228B22", "#008000", "#006400", "#556B2F", "#808000", "#6B8E23", "#2E8B57"],
     }
 ];
 
@@ -72,9 +76,9 @@ const reducer = (state: StyleState, action: StyleAction): StyleState => {
 };
 
 const initialState: StyleState = {
-    palette: null,
+    palette: ["#228B22", "#008000", "#006400", "#556B2F", "#808000", "#6B8E23", "#2E8B57"],
     color: "white",
-    spacing: 0,
+    spacing: 10,
 };
 
 export const StyleContext = createContext<
