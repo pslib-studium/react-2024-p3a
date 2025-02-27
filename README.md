@@ -9,6 +9,10 @@
 5. [04effects](/04effects/) - postranní efekty, useEffect, fetch
 6. [05context](/05context/) - kontext pro tunelování dat napříč aplikací
 7. [06router](/06router/) - pro routování
+8. [07reducer](/07reducer/) - pro správu složitějších stavů
+9. [08reactHookForm](/08reactHookForm/) - složitější formuláře
+10. [09styledComponents](/09styledComponents/) - Styled Components
+11. [10hooksAndHOCs](/10hooksAndHOCs/) - vlastní hooky a Higher Order Componenty
 
 
 ## Příkazy
