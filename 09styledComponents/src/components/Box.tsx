@@ -12,6 +12,7 @@ export const StyledBox = styled.div.withConfig({
     color: ${(props) => props.c ?? 'black'};
     background-color: ${(props) => props.bg ?? 'white'};
     border: 1px solid black;
+    padding: ${(props) => props.theme.spacing.small};
 `;
 
 const Box: FC<PropsWithChildren<BoxProps>> = ({ c, children, ...props }) => {
